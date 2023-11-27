@@ -3,8 +3,8 @@ import React from "react";
 export default function Hero() {
   return (
     <section className="container-screen py-20">
-      <div className="grid grid-cols-2 gap-4">
-        <div className="flex flex-col justify-center gap-4">
+      <div className="grid md:grid-cols-2 gap-4">
+        <div className="flex flex-col justify-center gap-4 order-2 md:order-1">
           <h3 className="font-bold text-xl">
             Natin Informatie Communicatie & Technologie
           </h3>
@@ -15,7 +15,7 @@ export default function Hero() {
             praesentium voluptatem omnis ducimus sapiente!
           </p>
         </div>
-        <div>
+        <div className="md:order-2">
           <img
             src="/hero.png"
             alt="Hero"
