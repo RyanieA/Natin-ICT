@@ -1,24 +1,20 @@
 import { Card, CardContent, CardMedia } from "@mui/material";
 import React from "react";
 
-export default function AboutCard() {
+export default function AboutCard({ image, title, description }) {
   return (
-    <Card className="!rounded-lg !shadow-sm !border" sx={{ maxWidth: 345 }}>
-      <CardMedia
-        component="img"
-        height="140"
-        image="/hero.png"
-        alt="green iguana"
+    <div className="relative">
+      <img
+        alt="img"
+        src={image}
+        className="max-w-[345px] z-20 absolute left-0"
       />
-      <CardContent>
-        <p className="font-medium">lorem</p>
-        <p className="text-sm mt-2">
-          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Incidunt,
-          quia provident. Dignissimos iste iure nostrum velit at. Consequatur
-          animi excepturi natus eos vel, deleniti, in deserunt adipisci esse
-          veniam repudiandae!
-        </p>
-      </CardContent>
-    </Card>
+      <Card className="!rounded-lg !shadow-sm mt-32" sx={{ maxWidth: 345 }}>
+        <CardContent className="mt-10">
+          <p className="font-medium">{title}</p>
+          <p className="text-sm mt-2">{description}</p>
+        </CardContent>
+      </Card>
+    </div>
   );
 }
