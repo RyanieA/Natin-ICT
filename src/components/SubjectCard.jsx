@@ -1,7 +1,7 @@
 import { Card, CardContent, CardMedia } from "@mui/material";
 import React from "react";
 
-export default function AboutCard({ image, title, description }) {
+export default function SubjectCard({ image, title, description }) {
   return (
     <div className="relative">
       <img

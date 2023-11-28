@@ -1,6 +1,6 @@
 import React from "react";
-import AboutCard from "./aboutCard";
 import { Button } from "@mui/material";
+import SubjectCard from "./SubjectCard";
 
 export default function AboutSection() {
   const subjects = [
@@ -25,12 +25,12 @@ export default function AboutSection() {
   ];
 
   return (
-    <section className="py-6 bg-neutral-50/50">
+    <section className="py-6 bg-neutral-50">
       <div className="container-screen">
         <h3 className="font-semibold text-lg mb-4">Vakken</h3>
         <div className="grid md:grid-cols-2 lg:grid-cols-3">
           {subjects.map(({ image, title, description }, i) => (
-            <AboutCard
+            <SubjectCard
               key={i}
               image={image}
               title={title}
