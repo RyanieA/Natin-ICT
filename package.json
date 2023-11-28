@@ -15,7 +15,8 @@
     "@mui/material": "^5.14.18",
     "lucide-react": "^0.293.0",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react-dom": "^18.2.0",
+    "react-simple-typewriter": "^5.0.1"
   },
   "devDependencies": {
     "@types/react": "^18.2.37",
