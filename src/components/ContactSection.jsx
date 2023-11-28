@@ -1,7 +1,7 @@
 import React from "react";
 export default function ContactSection() {
   return (
-    <div className="container-screen py-6">
+    <div className="container-screen py-6" id="contact">
       <div className="grid md:grid-cols-2 gap-4">
         <div className="">
           <img

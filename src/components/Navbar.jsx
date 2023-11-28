@@ -1,6 +1,7 @@
 import { Button, Menu, MenuItem } from "@mui/material";
 import * as React from "react";
 import { Menu as MenuToggle } from "lucide-react";
+import { ScrollintoView } from "../lib/scrollToView";
 
 function Navbar() {
   const links = [
@@ -21,15 +22,19 @@ function Navbar() {
     setAnchorEl(null);
   };
 
+  const goTo = (id) => {
+    ScrollintoView(id);
+  };
+
   return (
-    <nav className="shadow-sm py-4">
+    <nav className="shadow-sm py-4 bg-white sticky top-0 z-30">
       <div className="container-screen flex items-center justify-between">
-        <p className="font-bold text-lg"> Hello World </p>
+        <a href="/" className="font-bold text-lg">
+          Natin ICT{" "}
+        </a>
         <div className="hidden lg:flex items-center gap-4">
           {links.map((item) => (
-            <a key={item.link} href={item.link}>
-              {item.label}
-            </a>
+            <button onClick={() => goTo(item.link)}>{item.label}</button>
           ))}
         </div>
 

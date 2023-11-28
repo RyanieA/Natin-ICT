@@ -6,6 +6,7 @@ import Navbar from "./components/Navbar";
 import Hero from "./components/hero";
 import AboutSection from "./components/AboutSection";
 import ContactSection from "./components/ContactSection";
+import Footer from "./components/Footer";
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
       <Hero />
       <AboutSection />
       <ContactSection />
+      <Footer />
     </>
   );
 }
