@@ -1,17 +1,18 @@
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 import "./App.css";
-import Hero from "./components/hero";
-import AboutSection from "./components/AboutSection";
-import ContactSection from "./components/ContactSection";
-import Layout from "./layouts/Layout";
+import Home from "./Home";
+import About from "./About";
+// import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 
 function App() {
   return (
-    <Layout>
-      <Hero />
-      <AboutSection />
-      <ContactSection />
-    </Layout>
-  );
+    <BrowserRouter>
+    <Routes>
+      <Route path="/" element={<Home />} />
+      <Route path="/about" element={<About />} />
+    </Routes>
+    </BrowserRouter>
+    );
 }
 
 export default App;

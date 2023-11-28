@@ -12,6 +12,7 @@ export default function ContactSection() {
         </div>
         <div className="flex flex-col justify-center gap-4">
           <table>
+            <tbody>
             <tr>
               <td className="font-medium">Email:</td>
               <td>
@@ -31,6 +32,7 @@ export default function ContactSection() {
               <td className="font-medium">Adres:</td>
               <td> Mr. J. Lachmonstraat 180-182</td>
             </tr>
+           </tbody>
           </table>
         </div>
       </div>

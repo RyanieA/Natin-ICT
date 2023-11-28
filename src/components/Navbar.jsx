@@ -7,7 +7,7 @@ function Navbar() {
   const links = [
     { label: "Over Ons", link: "about" },
     { label: "Intake", link: "intake" },
-    { label: "Contact", link: "contact" },
+    // { label: "Contact", link: "contact" },
   ];
 
   const [anchorEl, setAnchorEl] = React.useState(null);
@@ -26,16 +26,23 @@ function Navbar() {
     ScrollintoView(id);
   };
 
+  const mobileClick = (id) => {
+    setAnchorEl(null)
+    goTo(id)
+  }
+
   return (
     <nav className="shadow-sm py-4 bg-white sticky top-0 z-30">
       <div className="container-screen flex items-center justify-between">
         <a href="/" className="font-bold text-lg">
-          Natin ICT{" "}
+          Natin ICT
         </a>
         <div className="hidden lg:flex items-center gap-4">
-          {links.map((item) => (
-            <button onClick={() => goTo(item.link)}>{item.label}</button>
-          ))}
+          {links.map((item,i) => (
+            <a href={item.link} key={i}>{item.label}</a>
+            ))}
+          
+             <button onClick={() => goTo("contact")}>Contact</button>
         </div>
 
         <div className="lg:hidden">
@@ -59,9 +66,12 @@ function Navbar() {
           >
             {links.map((item, i) => (
               <MenuItem key={i} onClick={handleClose}>
-                <a href={item.link}>{item.label}</a>
+                <a href={item.link} key={i}>{item.label}</a>
               </MenuItem>
             ))}
+              <MenuItem onClick={()=>mobileClick("contact")}>
+                Contact
+              </MenuItem>
           </Menu>
         </div>
       </div>
