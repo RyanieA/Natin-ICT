@@ -27,9 +27,9 @@ function Navbar() {
   };
 
   const mobileClick = (id) => {
-    setAnchorEl(null)
-    goTo(id)
-  }
+    setAnchorEl(null);
+    goTo(id);
+  };
 
   return (
     <nav className="shadow-sm py-4 bg-white sticky top-0 z-30">
@@ -38,11 +38,13 @@ function Navbar() {
           Natin ICT
         </a>
         <div className="hidden lg:flex items-center gap-4">
-          {links.map((item,i) => (
-            <a href={item.link} key={i}>{item.label}</a>
-            ))}
-          
-             <button onClick={() => goTo("contact")}>Contact</button>
+          {links.map((item, i) => (
+            <a href={item.link} key={i}>
+              {item.label}
+            </a>
+          ))}
+
+          <button onClick={() => goTo("contact")}>Contact</button>
         </div>
 
         <div className="lg:hidden">
@@ -66,12 +68,12 @@ function Navbar() {
           >
             {links.map((item, i) => (
               <MenuItem key={i} onClick={handleClose}>
-                <a href={item.link} key={i}>{item.label}</a>
+                <a href={item.link} key={i}>
+                  {item.label}
+                </a>
               </MenuItem>
             ))}
-              <MenuItem onClick={()=>mobileClick("contact")}>
-                Contact
-              </MenuItem>
+            <MenuItem onClick={() => mobileClick("contact")}>Contact</MenuItem>
           </Menu>
         </div>
       </div>
