@@ -5,6 +5,9 @@ import CardActions from "@mui/material/CardActions";
 import CardContent from "@mui/material/CardContent";
 import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
+import { Splide, SplideSlide } from '@splidejs/react-splide';
+import '@splidejs/react-splide/css';
+import { Badge } from "@mui/material";
 
 const bull = (
   <Box
@@ -21,13 +24,9 @@ export default function BentoGrid() {
       <div className="grid grid-cols-4 gap-4">
         <Card className="col-span-4 lg:col-span-1 !rounded-lg !order-3">
           <CardContent>
-            <Typography
-              sx={{ fontSize: 14 }}
-              color="text.secondary"
-              gutterBottom
-            >
-              Specialisatie
-            </Typography>
+            <Badge className="bg-blue-100 text-blue-500 rounded-full px-4 flex items-center gap-2 text-sm mb-2">
+              <div className="bg-blue-500 w-2 h-2 rounded-full animate-pulse"/>Specialisatie
+            </Badge>
             <Typography variant="h5" component="div">
               Applicatie{bull}Ontwikkelaar
             </Typography>
@@ -43,15 +42,12 @@ export default function BentoGrid() {
             </Typography>
           </CardContent>
         </Card>
+        {/*  */}
         <Card className="col-span-4 lg:col-span-1 !rounded-lg !order-4">
           <CardContent>
-            <Typography
-              sx={{ fontSize: 14 }}
-              color="text.secondary"
-              gutterBottom
-            >
-              Specialisatie
-            </Typography>
+            <Badge className="bg-blue-100 text-blue-500 rounded-full px-4 flex items-center gap-2 text-sm mb-2">
+              <div className="bg-blue-500 w-2 h-2 rounded-full animate-pulse"/>Specialisatie
+            </Badge>
             <Typography variant="h5" component="div">
               ICT{bull}Beheerder
             </Typography>
@@ -66,33 +62,25 @@ export default function BentoGrid() {
             </Typography>
           </CardContent>
         </Card>
+        {/*  */}
         <Card className="col-span-4 lg:col-span-2 !rounded-lg !row-span-2 !order-1">
-          <CardContent>
-            <Typography variant="h5" component="div">
-              Fotos
-            </Typography>
-            <Typography sx={{ mb: 1.5 }} color="text.secondary">
-              adjective
-            </Typography>
-            <Typography variant="body2">
-              well meaning and kindly.
-              <br />
-              {'"a benevolent smile"'}
-            </Typography>
-          </CardContent>
-          <CardActions>
-            <Button size="small">Learn More</Button>
-          </CardActions>
+          {/* <CardContent> */}
+          <Splide aria-label="Images" className="w-full h-full">
+            <SplideSlide className="h-[100%]">
+              <img src="/coding.jpg" alt="Image 1" className="object-cover h-full"/>
+            </SplideSlide>
+            <SplideSlide className="h-[100%]">
+              <img src="/working.jpg" alt="Image 2" className="object-cover h-full"/>
+            </SplideSlide>
+          </Splide>
+          {/* </CardContent> */}
         </Card>
+        {/*  */}
         <Card className="col-span-4 lg:col-span-2 !rounded-lg !order-2">
           <CardContent>
-            <Typography
-              sx={{ fontSize: 14 }}
-              color="text.secondary"
-              gutterBottom
-            >
-              Stage
-            </Typography>
+          <Badge className="bg-orange-100 text-orange-500 rounded-full px-4 flex items-center gap-2 text-sm">
+              <div className="bg-orange-500 w-2 h-2 rounded-full animate-pulse"/>Stage
+            </Badge>
             <Typography variant="h5" component="div">
               be{bull}nev{bull}o{bull}lent
             </Typography>
